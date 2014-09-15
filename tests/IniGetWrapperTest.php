@@ -44,6 +44,11 @@ class IniGetWrapperTest extends \PHPUnit_Framework_TestCase
         $this->assertNull($this->wrapper->getBytes($this->nonExistentVarname));
     }
 
+    public function testGetListNxNull()
+    {
+        $this->assertNull($this->wrapper->getList($this->nonExistentVarname));
+    }
+
     public function testGetBytesIsNumeric()
     {
         $this->assertInternalType('numeric', $this->wrapper->getBytes('memory_limit'));

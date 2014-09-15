@@ -166,4 +166,22 @@ class IniGetWrapperFakeTest extends \PHPUnit_Framework_TestCase
             array(-12345,            '-12345'),
         );
     }
+
+    /**
+    * @dataProvider getListData
+    */
+    public function testGetList($expected, $value)
+    {
+        $this->assertSame($expected, $this->wrapper->getList($value));
+    }
+
+    public function getListData()
+    {
+        return array(
+            array(
+                array('pcntl_alarm', 'pcntl_fork', 'pcntl_waitpid'),
+                'pcntl_alarm,pcntl_fork,pcntl_waitpid',
+            ),
+        );
+    }
 }

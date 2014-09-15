@@ -124,6 +124,20 @@ class IniGetWrapper
         return $value_numeric;
     }
 
+    /**
+    * Gets configuration option value as a list (array).
+    * Converts comma-separated string into list (array).
+    *
+    * @param string $varname  The configuration option name.
+    * @return null|int|float  Null if configuration option does not exist.
+    *                         The configuration option value as a list (array) otherwise.
+    */
+    public function getList($varname)
+    {
+        $value = $this->getString($varname);
+        return $value === null ? null : explode(',', $value);
+    }
+
     protected function getPhp($varname)
     {
         return ini_get($varname);
