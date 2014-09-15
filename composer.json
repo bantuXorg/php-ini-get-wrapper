@@ -2,5 +2,11 @@
     "name": "bantu/ini-get-wrapper",
     "type": "library",
     "description": "Wrapper around ini_get()",
-    "license": "MIT"
+    "license": "MIT",
+    "autoload": {
+        "psr-4": { "bantu\\IniGetWrapper\\": "src/" }
+    },
+    "autoload-dev": {
+        "psr-4": { "bantu\\IniGetWrapper\\": "tests/" }
+    }
 }
