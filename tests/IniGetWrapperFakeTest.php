@@ -138,6 +138,7 @@ class IniGetWrapperFakeTest extends \PHPUnit_Framework_TestCase
     public function getBytesInvalidData()
     {
         return array(
+            array('somestring'),
             array('foo'),
             array('k'),
             array('-k'),

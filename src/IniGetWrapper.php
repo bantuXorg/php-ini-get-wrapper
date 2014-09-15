@@ -98,10 +98,13 @@ class IniGetWrapper
             return null;
         }
 
-        $value_lower = strtolower($value);
-        $value_numeric = $value + 0;
+        // Split string into numeric value and unit.
+        $value_numeric = substr($value, 0, -1);
+        if (!is_numeric($value_numeric)) {
+            return null;
+        }
 
-        switch ($value_lower[strlen($value_lower) - 1]) {
+        switch (strtolower($value[strlen($value) - 1])) {
             case 'g':
                 $value_numeric *= 1024;
                 // no break
