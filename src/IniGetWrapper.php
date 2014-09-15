@@ -138,6 +138,9 @@ class IniGetWrapper
         return $value === null ? null : explode(',', $value);
     }
 
+    /**
+    * @param string $varname  The configuration option name.
+    */
     protected function getPhp($varname)
     {
         return ini_get($varname);
