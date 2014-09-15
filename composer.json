@@ -3,6 +3,9 @@
     "type": "library",
     "description": "Wrapper around ini_get()",
     "license": "MIT",
+    "require-dev": {
+        "phpunit/phpunit": "3.7.*"
+    },
     "autoload": {
         "psr-4": { "bantu\\IniGetWrapper\\": "src/" }
     },
