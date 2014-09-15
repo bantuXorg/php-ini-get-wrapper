@@ -129,7 +129,7 @@ class IniGetWrapper
     * Converts comma-separated string into list (array).
     *
     * @param string $varname  The configuration option name.
-    * @return null|int|float  Null if configuration option does not exist.
+    * @return null|array      Null if configuration option does not exist.
     *                         The configuration option value as a list (array) otherwise.
     */
     public function getList($varname)
@@ -143,8 +143,8 @@ class IniGetWrapper
     *
     * @param string $varname  The configuration option name.
     * @param string $needle   The element to check whether it is contained in the list.
-    * @return null|int|float  Null if configuration option does not exist.
-    *                         The configuration option value as a list (array) otherwise.
+    * @return null|bool       Null if configuration option does not exist.
+    *                         Whether $needle is contained in the list otherwise.
     */
     public function listContains($varname, $needle)
     {
