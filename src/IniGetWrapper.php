@@ -139,6 +139,20 @@ class IniGetWrapper
     }
 
     /**
+    * Checks whether a list contains a given element (string).
+    *
+    * @param string $varname  The configuration option name.
+    * @param string $needle   The element to check whether it is contained in the list.
+    * @return null|int|float  Null if configuration option does not exist.
+    *                         The configuration option value as a list (array) otherwise.
+    */
+    public function listContains($varname, $needle)
+    {
+        $list = $this->getList($varname);
+        return $list === null ? null : in_array($needle, $list, true);
+    }
+
+    /**
     * @param string $varname  The configuration option name.
     */
     protected function getPhp($varname)

@@ -184,4 +184,48 @@ class IniGetWrapperFakeTest extends \PHPUnit_Framework_TestCase
             ),
         );
     }
+
+    /**
+    * @dataProvider listContainsDataTrue
+    */
+    public function testListContainsTrue($value, $needle)
+    {
+        $this->assertTrue($this->wrapper->listContains($value, $needle));
+    }
+
+    public function listContainsDataTrue()
+    {
+        return array(
+            array(
+                'pcntl_alarm,pcntl_fork,pcntl_waitpid',
+                'pcntl_alarm',
+            ),
+            array(
+                'pcntl_alarm,pcntl_fork,pcntl_waitpid',
+                'pcntl_fork',
+            ),
+            array(
+                'pcntl_alarm,pcntl_fork,pcntl_waitpid',
+                'pcntl_waitpid',
+            ),
+        );
+    }
+
+    /**
+    * @dataProvider listContainsDataFalse
+    */
+    public function testListContainsFalse($value, $needle)
+    {
+        $this->assertFalse($this->wrapper->listContains($value, $needle));
+    }
+
+    public function listContainsDataFalse()
+    {
+        return array(
+            array(
+                'pcntl_alarm,pcntl_fork,pcntl_waitpid',
+                'foo',
+            ),
+        );
+    }
 }
