@@ -1,0 +1,6 @@
+{
+    "name": "bantu/ini-get-wrapper",
+    "type": "library",
+    "description": "Wrapper around ini_get()",
+    "license": "MIT"
+}
