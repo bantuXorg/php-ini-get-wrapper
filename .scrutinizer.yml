@@ -2,6 +2,9 @@ imports:
     - php
 
 tools:
+    external_code_coverage:
+        runs: 6 # Number of Travis CI environments
+
     php_code_sniffer:
         config:
             standard: "PSR2"
