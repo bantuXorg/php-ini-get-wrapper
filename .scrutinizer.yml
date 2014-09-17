@@ -3,7 +3,7 @@ imports:
 
 tools:
     external_code_coverage:
-        runs: 6 # Number of Travis CI environments
+        runs: 5 # Number of Travis CI environments minus HHVM
 
     php_code_sniffer:
         config:
