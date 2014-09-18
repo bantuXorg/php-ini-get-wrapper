@@ -92,12 +92,6 @@ class IniGetWrapper
             return $value + 0;
         }
 
-        if (strlen($value) < 2 || strlen($value) < 3 && $value[0] === '-') {
-            // Either a single character
-            // or two characters where the first one is a minus.
-            return null;
-        }
-
         return $this->convertBytes($value);
     }
 
