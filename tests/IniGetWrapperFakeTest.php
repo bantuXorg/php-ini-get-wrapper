@@ -144,6 +144,7 @@ class IniGetWrapperFakeTest extends \PHPUnit_Framework_TestCase
             array('-k'),
             array('M'),
             array('-M'),
+            array('100F'),
         );
     }
 
