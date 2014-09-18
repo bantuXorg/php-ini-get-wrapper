@@ -98,30 +98,7 @@ class IniGetWrapper
             return null;
         }
 
-        // Split string into numeric value and unit.
-        $value_numeric = substr($value, 0, -1);
-        if (!is_numeric($value_numeric)) {
-            return null;
-        }
-
-        switch (strtolower($value[strlen($value) - 1])) {
-            case 'g':
-                $value_numeric *= 1024;
-                // no break
-            case 'm':
-                $value_numeric *= 1024;
-                // no break
-            case 'k':
-                $value_numeric *= 1024;
-                break;
-
-            default:
-                // It's not already in bytes (and thus numeric)
-                // and does not carry a unit.
-                return null;
-        }
-
-        return $value_numeric;
+        return $this->convertBytes($value);
     }
 
     /**
@@ -158,5 +135,35 @@ class IniGetWrapper
     protected function getPhp($varname)
     {
         return ini_get($varname);
+    }
+
+    /**
+    * @param string $string   String containing a numeric and ending with a unit, e.g. 128M.
+    * @return null|int|float
+    */
+    protected function convertBytes($string)
+    {
+        $numeric = substr($string, 0, -1);
+        if (!is_numeric($numeric)) {
+            return null;
+        }
+
+        switch (strtolower($string[strlen($string) - 1])) {
+            case 'g':
+                $numeric *= 1024;
+                // no break
+            case 'm':
+                $numeric *= 1024;
+                // no break
+            case 'k':
+                $numeric *= 1024;
+                break;
+
+            default:
+                // Does not carry a valid unit.
+                return null;
+        }
+
+        return $numeric;
     }
 }
