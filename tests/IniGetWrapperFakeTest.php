@@ -202,7 +202,7 @@ class IniGetWrapperFakeTest extends \PHPUnit_Framework_TestCase
                 'pcntl_alarm',
             ),
             array(
-                'pcntl_alarm,pcntl_fork,pcntl_waitpid',
+                'pcntl_alarm, pcntl_fork, pcntl_waitpid',
                 'pcntl_fork',
             ),
             array(

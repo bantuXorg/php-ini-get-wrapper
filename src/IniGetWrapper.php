@@ -106,7 +106,7 @@ class IniGetWrapper
     public function getList($varname)
     {
         $value = $this->getString($varname);
-        return $value === null ? null : explode(',', $value);
+        return $value === null ? null : array_map('trim', explode(',', $value));
     }
 
     /**
