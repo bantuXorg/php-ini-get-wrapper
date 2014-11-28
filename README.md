@@ -1,7 +1,7 @@
-[![Travis Build Status](https://travis-ci.org/bantu/php-ini-get-wrapper.svg?branch=master)](https://travis-ci.org/bantu/php-ini-get-wrapper)
-[![Scrutinizer Build Status](https://scrutinizer-ci.com/g/bantu/php-ini-get-wrapper/badges/build.png?b=master)](https://scrutinizer-ci.com/g/bantu/php-ini-get-wrapper/build-status/master)
-[![Code Coverage](https://scrutinizer-ci.com/g/bantu/php-ini-get-wrapper/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/bantu/php-ini-get-wrapper/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bantu/php-ini-get-wrapper/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bantu/php-ini-get-wrapper/?branch=master)
+[![Travis Build Status](https://travis-ci.org/bantuXorg/php-ini-get-wrapper.svg?branch=master)](https://travis-ci.org/bantuXorg/php-ini-get-wrapper)
+[![Scrutinizer Build Status](https://scrutinizer-ci.com/g/bantuXorg/php-ini-get-wrapper/badges/build.png?b=master)](https://scrutinizer-ci.com/g/bantuXorg/php-ini-get-wrapper/build-status/master)
+[![Code Coverage](https://scrutinizer-ci.com/g/bantuXorg/php-ini-get-wrapper/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/bantuXorg/php-ini-get-wrapper/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/bantuXorg/php-ini-get-wrapper/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/bantuXorg/php-ini-get-wrapper/?branch=master)
 
 # Usage
 
