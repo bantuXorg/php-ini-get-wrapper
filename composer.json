@@ -3,6 +3,12 @@
     "type": "library",
     "description": "Convenience wrapper around ini_get()",
     "license": "MIT",
+    "authors": [
+        {
+            "name": "Andreas Fischer",
+            "email": "af@bantuX.org"
+        }
+    ],
     "require-dev": {
         "phpunit/phpunit": "3.7.*"
     },
